@@ -26,7 +26,7 @@ def getSolutionsSubstitute(A,B):
     A_np = numpy.array(A)
     B_np = numpy.array(B)
     sol = numpy.linalg.inv(A_np).dot(B)
-    return sol
+    return sol.tolist()
 
 def khaletsky_method(A,B):
     L, U = getmatrixLandU(A,B)
@@ -43,7 +43,9 @@ if __name__ == '__main__':
     A = [[1,1,1],[3,-1,2],[2,0,2]]
     B = [8,-1,5]
     L,U = getmatrixLandU(A,B)
-    print(getSolutionsSubstitute(L,B))
+    Y = getSolutionsSubstitute(L,B)
+    X = getSolutionsSubstitute(U,Y)
+    print(X)
     #print(integrationTrapezial(math.pi/2,math.pi,4))
     #print(integrationSimpson(math.pi/2,math.pi,4))
     #qcTrapz = (integrationTrapezial(math.pi,math.pi/2,8) - integrationTrapezial(math.pi,math.pi/2,4))/(integrationTrapezial(math.pi,math.pi/2,16) - integrationTrapezial(math.pi,math.pi/2,8))
