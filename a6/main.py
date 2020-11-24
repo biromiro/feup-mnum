@@ -54,3 +54,4 @@ if __name__ == '__main__':
     #errorSimpson = (integrationSimpson(math.pi,math.pi/2,16) - integrationSimpson(math.pi,math.pi/2,8))/15
     #print(qcTrapz,errorTrapz)
     #print(qcSimpson,errorSimpson)
+    
