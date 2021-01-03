@@ -153,7 +153,7 @@ print(golden_ratio(0.5,1))
 print(newton_zero(0.5))
 '''
 
-#
+#6
 '''
 a = 0.4523 * 10**4
 b = 0.2115 * 10**(-3)
